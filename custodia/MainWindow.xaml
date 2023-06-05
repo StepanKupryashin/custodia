@@ -1,0 +1,28 @@
+﻿<Window x:Class="custodia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:custodia"
+        mc:Ignorable="d"
+        Title="Стражинк" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Content="Тип пользователя" HorizontalAlignment="Left" Height="32" Margin="154,95,0,0" VerticalAlignment="Top" Width="157"/>
+        <ComboBox x:Name="UserType" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="318,95,0,0" VerticalAlignment="Top" Width="188" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Админ"/>
+            <ComboBoxItem Content="Пользователь"/>
+        </ComboBox>
+        <Label Grid.Column="1" Content="Логин" HorizontalAlignment="Left" Height="30" Margin="154,147,0,0" VerticalAlignment="Top" Width="159"/>
+        <Label Grid.Column="1" Content="Пароль" HorizontalAlignment="Left" Height="30" Margin="154,0,0,0" VerticalAlignment="Center" Width="159"/>
+        <Label Grid.Column="1" Content="Секретное слово" HorizontalAlignment="Left" Height="30" Margin="154,248,0,0" VerticalAlignment="Top" Width="159"/>
+        <Button Grid.Column="1" Content="Войти в систему&#xD;&#xA;" HorizontalAlignment="Left" Height="44" Margin="213,332,0,0" VerticalAlignment="Top" Width="210" Background="{x:Null}" FlowDirection="RightToLeft" Click="Button_Click"/>
+        <TextBox x:Name="loginInput" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="318,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" TextChanged="TextBox_TextChanged" AutomationProperties.HelpText="Введите логин"/>
+        <PasswordBox x:Name="paswordInput" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="318,0,0,0" VerticalAlignment="Center" Width="158"/>
+        <PasswordBox x:Name="secretInput" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="318,248,0,0" VerticalAlignment="Top" Width="158"/>
+
+    </Grid>
+</Window>
